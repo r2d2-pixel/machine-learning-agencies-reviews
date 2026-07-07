@@ -30,23 +30,23 @@ const related = allComparisons.filter(c =>
   (c.slug1 === slug1 || c.slug2 === slug1 || c.slug1 === slug2 || c.slug2 === slug2)
 ).slice(0, 6);
 
-// TODO: Update capability keys + checks to match your niche's service categories.
-// Keys must match the badge/use-case values in your companies.ts data.
 function hasCap(company: Company, cap: string): string {
   const checks: Record<string, (c: Company) => boolean> = {
-    'Custom build': c => c.badges.some(b => b.toLowerCase().includes('custom')),
-    'Consulting': c => c.badges.some(b => b.toLowerCase().includes('consult')) || c.useCases.some(u => u.toLowerCase().includes('consult') || u.toLowerCase().includes('strateg')),
-    'Integration': c => c.badges.some(b => b.toLowerCase().includes('integr')),
-    'Staff augmentation': c => c.badges.some(b => b.toLowerCase().includes('staff')),
-    'Fixed-price projects': c => c.engagementModels.some(m => m.toLowerCase().includes('fixed')),
-    'Dedicated team model': c => c.engagementModels.some(m => m.toLowerCase().includes('dedicated')),
+    'Custom ML development': c => c.badges.some(b => b.includes('custom-ml')),
+    'Deep learning':         c => c.badges.some(b => b.includes('deep-learning')),
+    'NLP / Text analytics':  c => c.badges.some(b => b.includes('nlp')),
+    'Computer vision':       c => c.badges.some(b => b.includes('computer-vision')),
+    'MLOps & deployment':    c => c.badges.some(b => b.includes('mlops')),
+    'Generative AI':         c => c.badges.some(b => b.includes('generative-ai')),
+    'AI strategy':           c => c.badges.some(b => b.includes('ai-strategy')),
+    'Staff augmentation':    c => c.badges.some(b => b.includes('staff-aug')),
+    'Fixed-price projects':  c => c.engagementModels.some(m => m.toLowerCase().includes('fixed')),
+    'Dedicated team model':  c => c.engagementModels.some(m => m.toLowerCase().includes('dedicated')),
   };
   return checks[cap]?.(company) ? '✓' : '✗';
 }
 
-// TODO: Replace this list with technologies/tools relevant to your niche.
-// These appear in the tech stack comparison table on every comparison page.
-const allTech = ['TODO: Tool 1', 'TODO: Tool 2', 'TODO: Tool 3', 'TODO: Tool 4', 'TODO: Tool 5'];
+const allTech = ['Python', 'TensorFlow', 'PyTorch', 'AWS', 'Kubernetes', 'Databricks', 'MLflow'];
 
 function hasTech(company: Company, tech: string): string {
   return company.techStack.some(t => t.toLowerCase().includes(tech.toLowerCase())) ? '✓' : 'N/A';
@@ -186,7 +186,7 @@ const decisionRows: [string, string][] = [
             </tr>
           </thead>
           <tbody>
-            {['Custom build', 'Consulting', 'Integration', 'Staff augmentation', 'Fixed-price projects', 'Dedicated team model'].map((cap, i) => (
+            {['Custom ML development', 'Deep learning', 'NLP / Text analytics', 'Computer vision', 'MLOps & deployment', 'Generative AI', 'AI strategy', 'Staff augmentation', 'Fixed-price projects', 'Dedicated team model'].map((cap, i) => (
               <tr class={`border-b border-slate-100 ${i % 2 === 1 ? 'bg-slate-50/40' : ''}`}>
                 <td class="px-4 py-3 font-medium text-slate-700">{cap}</td>
                 <td class={`px-4 py-3 font-semibold ${hasCap(c1, cap) === '✓' ? 'text-green-600' : 'text-red-400'}`}>{hasCap(c1, cap)}</td>
