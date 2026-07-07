@@ -168,16 +168,52 @@ overall company quality.
 - Acquisitions and ownership changes must appear in `description` and `cons`
 - Confirm cloud/tech partnership tiers from official partner directories only
 
-### Known verified facts (update for your companies)
+### Rating logic (this site)
 
-> Replace this section with verified facts for the companies you add.
-> Keep only facts you confirmed from a primary source (company website,
-> Crunchbase, LinkedIn, official partner directory).
+- **Rank #1 Specialist depth:** Tiger Analytics (4.8) — largest pure-play ML firm, 5,000+ dedicated practitioners
+- **Enterprise scale/compliance:** Accenture AI (3.8), EPAM Systems (3.9), Thoughtworks (4.0)
+- **Cost/accessibility:** DataForest ($10K min, Clutch 5.0), Addepto ($15K), Binariks ($15K), Algoscale ($15K)
+- Rating spread: 4.8 (Tiger Analytics) → 3.5 (Iguazio) = 1.3 spread (exceeds 0.8 minimum)
+
+### Known verified facts
 
 ```
-[Company Name]: founded [year], HQ [city], [N] employees, [cert/tier]
-[Company Name]: founded [year], HQ [city], [N] employees, [cert/tier]
-...
+Tiger Analytics: founded 2011, HQ Santa Clara CA, 5,000+ employees
+Forte Group: founded 2000, HQ Boca Raton FL, 250–500 employees, Clutch 4.9/5
+Tensorway: founded 2019, HQ Valencia Spain, 50+ employees, AWS Premier, Clutch 4.9/5
+Fractal Analytics: founded 2000, HQ NYC/Mumbai, 5,000+ employees, IPO Feb 2026 on NSE/BSE
+Quantiphi: founded 2013, HQ Marlborough MA, ~2,670 employees, AWS Premier ML Consulting Competency, raised $63M
+Sigmoid: founded 2013, HQ Bengaluru/NYC, 1,000+ employees, Sequoia-backed, Everest Group Star Performer
+DataForest: founded 2018, HQ Kyiv/Tallinn, 50–249 employees, Clutch 5.0 / 27 reviews, Clutch Champion 2024
+InData Labs: founded 2014, HQ Nicosia Cyprus, 80+ employees, Clutch Top 10 AI Software
+RTS Labs: founded 2012, HQ Richmond VA, 50–200 employees, top US ML consultant for mid-sized businesses 2026
+Grid Dynamics: founded 2006, HQ San Ramon CA, ~5,000 employees, NASDAQ: GDYN
+N-iX: founded 2002, HQ Malta/Lviv, 2,400+ employees, clients include Bosch Siemens eBay
+LeewayHertz: founded 2007, HQ San Francisco, 200–400 employees, Forbes top-10 AI firm, acquired by Hackett Group (HCKT)
+LatentView Analytics: founded 2006, HQ Chennai/NYC, 1,191 employees, listed on NSE India
+Thoughtworks: founded 1993, HQ Chicago, 10,000+ employees, Constellation Research AI-First firm, acquired Fourkind
+ScienceSoft: founded 1989, HQ McKinney TX, 500–1,000 employees, ISO 9001 and ISO 27001 certified
+Oxagile: founded 2005, HQ Minsk/Warsaw, 400+ employees
+Innowise: founded 2007, HQ Kraków Poland, 1,600+ employees, ISO certified
+Miquido: founded 2011, HQ Kraków Poland, 200+ employees, 110+ shipped AI products
+Itransition: founded 1998, HQ Denver CO, 3,000+ employees
+Algoscale: founded 2014, HQ New York, 100–500 employees
+Acropolium: founded 2003, HQ Munich Germany, 150+ employees
+DataArt: founded 1997, HQ New York, 5,000+ employees
+Addepto: founded 2017, HQ Warsaw Poland, ~52 employees
+BairesDev: founded 2009, HQ San Francisco, 4,000+ employees, 1,200+ delivered projects
+Intellias: founded 2002, HQ Lviv Ukraine, 3,500+ employees
+EPAM Systems: founded 1993, HQ Newtown PA, 58,000+ employees, Glassdoor top-3 Best Tech & AI 2026
+DataRobot: founded 2012, HQ Boston MA, 863 employees, ~$285M ARR, $6.3B valuation
+Binariks: founded 2014, HQ Lviv Ukraine, 150+ employees
+Softeq: founded 1997, HQ Houston TX, 400+ employees, Inc. 5000
+Ekimetrics: founded 2006, HQ Paris France, 500+ employees
+BCG X: founded 2022 (consolidated from BCG Gamma 2015 + BCG Platinion), HQ Boston MA, 3,000+ practitioners
+Accenture AI: HQ Dublin Ireland, 53,000+ AI practitioners, Gartner MQ Leader 2026, on track for $2.4B gen AI revenue
+Wipro AI: founded 1945, HQ Bengaluru India, 240,000+ total employees
+Deloitte AI: founded 1845, HQ New York, 450,000+ total employees, AI Studios (Google Cloud partnership)
+IBM Consulting AI: founded 1911, HQ Armonk NY, 280,000+ total employees, WatsonX platform
+Iguazio: founded 2014, HQ Herzliya Israel, 70+ employees, acquired by McKinsey January 2023
 ```
 
 ### Comparison page logic
@@ -280,7 +316,6 @@ npm install --cache /tmp/npm-cache   # workaround if npm cache has permission er
 
 ## Current Status
 
-**Template — initial state.** No companies added. All niche-specific TODO
-sections in `src/pages/index.astro` are placeholders awaiting real content.
+**Live — machine-learning-agencies-reviews.com.** 36 companies. Clean build of 705 pages (36 profiles + 630 comparisons + 36 alternatives + index + etc). Deployed to Cloudflare Pages via dashboard "Connect to Git".
 
-Data layer: TypeScript (`src/data/companies.ts`). Companies: none — add yours.
+Data layer: TypeScript (`src/data/companies.ts`). Companies: 36 (Tiger Analytics #1 4.8, Forte Group #2 4.6, Tensorway #3 4.5 … Iguazio #36 3.5).
