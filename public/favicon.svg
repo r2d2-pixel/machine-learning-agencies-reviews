@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="6" fill="#6d28d9"/>
+  <rect width="32" height="32" rx="6" fill="#d97706"/>
   <!-- Neural network nodes -->
   <circle cx="8" cy="10" r="2.5" fill="#fff" fill-opacity="0.95"/>
   <circle cx="8" cy="22" r="2.5" fill="#fff" fill-opacity="0.95"/>
@@ -9,12 +9,12 @@
   <circle cx="24" cy="10" r="2.5" fill="#fff" fill-opacity="0.95"/>
   <circle cx="24" cy="22" r="2.5" fill="#fff" fill-opacity="0.95"/>
   <!-- Connections -->
-  <line x1="10.2" y1="9.1" x2="13.8" y2="7.1" stroke="#c4b5fd" stroke-width="1.2"/>
-  <line x1="10.2" y1="11" x2="13.8" y2="15" stroke="#c4b5fd" stroke-width="1.2"/>
-  <line x1="10.2" y1="21" x2="13.8" y2="17" stroke="#c4b5fd" stroke-width="1.2"/>
-  <line x1="10.2" y1="22.9" x2="13.8" y2="24.9" stroke="#c4b5fd" stroke-width="1.2"/>
-  <line x1="18.2" y1="7.1" x2="21.8" y2="9.1" stroke="#c4b5fd" stroke-width="1.2"/>
-  <line x1="18.2" y1="15" x2="21.8" y2="11" stroke="#c4b5fd" stroke-width="1.2"/>
-  <line x1="18.2" y1="17" x2="21.8" y2="21" stroke="#c4b5fd" stroke-width="1.2"/>
-  <line x1="18.2" y1="24.9" x2="21.8" y2="22.9" stroke="#c4b5fd" stroke-width="1.2"/>
+  <line x1="10.2" y1="9.1" x2="13.8" y2="7.1" stroke="#fde68a" stroke-width="1.2"/>
+  <line x1="10.2" y1="11" x2="13.8" y2="15" stroke="#fde68a" stroke-width="1.2"/>
+  <line x1="10.2" y1="21" x2="13.8" y2="17" stroke="#fde68a" stroke-width="1.2"/>
+  <line x1="10.2" y1="22.9" x2="13.8" y2="24.9" stroke="#fde68a" stroke-width="1.2"/>
+  <line x1="18.2" y1="7.1" x2="21.8" y2="9.1" stroke="#fde68a" stroke-width="1.2"/>
+  <line x1="18.2" y1="15" x2="21.8" y2="11" stroke="#fde68a" stroke-width="1.2"/>
+  <line x1="18.2" y1="17" x2="21.8" y2="21" stroke="#fde68a" stroke-width="1.2"/>
+  <line x1="18.2" y1="24.9" x2="21.8" y2="22.9" stroke="#fde68a" stroke-width="1.2"/>
 </svg>

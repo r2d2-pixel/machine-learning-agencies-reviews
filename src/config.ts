@@ -17,7 +17,7 @@ export const NICHE = {
 };
 
 export const BRANDING = {
-  primaryColor: '#6d28d9',
+  primaryColor: '#d97706',
   logoText:     'Best Machine Learning Agencies',
   logoPath:     '/logos/site-logo.svg',
 };
