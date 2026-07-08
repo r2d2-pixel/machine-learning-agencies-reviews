@@ -23,8 +23,8 @@ export const BRANDING = {
 };
 
 export const MONETIZATION = {
-  enabled: true,
-  defaultRel: 'sponsored' as 'sponsored' | 'nofollow' | '',
+  enabled: false,
+  defaultRel: 'nofollow' as 'sponsored' | 'nofollow' | '',
   disclosurePath: '/affiliate-disclosure',
 };
 
