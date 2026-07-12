@@ -7,6 +7,16 @@ import { SITE, NICHE } from '../config';
 const comparisons = getComparisons();
 const year = new Date().getFullYear();
 
+// Title Case for the homepage <title>/H1 only — NICHE.providersLabel is stored
+// lowercase because it also reads correctly mid-sentence (e.g. "36 companies
+// reviewed"); this capitalizes it just for the heading-style usage below.
+const SMALL_WORDS = new Set(['a', 'an', 'the', 'in', 'at', 'on', 'for', 'of', 'to', 'by', 'with', 'from', 'as', 'and', 'or', 'but', 'nor']);
+const titleCase = (str: string) => str.split(' ').map((word, i) => {
+  const lower = word.toLowerCase();
+  return (i > 0 && SMALL_WORDS.has(lower)) ? lower : lower.charAt(0).toUpperCase() + lower.slice(1);
+}).join(' ');
+const providersLabelTC = titleCase(NICHE.providersLabel);
+
 // Top-rated companies used in featured profiles section
 const featuredProfiles = [...companies].sort((a, b) => b.rating - a.rating).slice(0, 10);
 
@@ -15,7 +25,7 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
 ---
 
 <Base
-  title={`Best ${NICHE.label} ${NICHE.providersLabel} in ${year}`}
+  title={`Best ${NICHE.label} ${providersLabelTC} in ${year}`}
   description={`Compare ${NICHE.label} ${NICHE.providersLabel} by pricing, stack, and use case. Independent reviews updated ${SITE.lastReviewed}.`}
   canonical={`${SITE.url}/`}
 >
@@ -24,7 +34,7 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
   <section class="bg-slate-50 border-b border-slate-200 py-14 sm:py-20">
     <div class="mx-auto max-w-4xl px-4 sm:px-6 text-center">
       <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight mb-4">
-        Best {NICHE.label} {NICHE.providersLabel} in {year}
+        Best {NICHE.label} {providersLabelTC} in {year}
       </h1>
       <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-6">
         Independent reviews of {companies.length} {NICHE.providersLabel} selected for verified delivery track records, technical expertise, and transparent pricing data. Updated {SITE.lastReviewed}.
