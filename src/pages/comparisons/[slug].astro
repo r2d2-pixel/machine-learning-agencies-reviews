@@ -21,7 +21,7 @@ const c2 = companies.find(c => c.slug === slug2)!;
 const slug = `${slug1}-vs-${slug2}`;
 const canonical = `${SITE.url}/comparisons/${slug}/`;
 const pageTitle = `${c1.name} vs ${c2.name} (${new Date().getFullYear()}): ${NICHE.label} comparison`;
-const pageDesc = `${c1.name} vs ${c2.name}: full side-by-side comparison of pricing, services, tech stack, and use cases. Updated ${SITE.lastReviewed}.`;
+const pageDesc = `${c1.name} vs ${c2.name}: full side-by-side comparison of pricing, services, tech stack, and use cases.`;
 
 // Related comparisons: all comparisons involving either company, excluding this one
 const allComparisons = getComparisons();
