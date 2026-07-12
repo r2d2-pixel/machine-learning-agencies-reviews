@@ -103,7 +103,7 @@ const jsonLd = [
       <!-- Badges -->
       <div class="flex flex-wrap gap-2">
         {company.badges.map(b => (
-          <span class="text-xs bg-blue-50 text-brand-700 border border-blue-200 px-2.5 py-1 rounded-full font-medium">{b}</span>
+          <span class="text-xs bg-brand-50 text-brand-700 border border-brand-200 px-2.5 py-1 rounded-full font-medium">{b}</span>
         ))}
       </div>
     </div>
@@ -369,7 +369,7 @@ const jsonLd = [
                 ? companies.find(co => co.slug === c.slug2)!
                 : companies.find(co => co.slug === c.slug1)!;
               return (
-                <a href={`/comparisons/${c.slug}/`} class="border border-slate-200 rounded-lg px-3 py-2.5 text-xs font-medium text-slate-700 hover:border-brand-300 hover:text-brand-600 hover:bg-blue-50 transition-colors">
+                <a href={`/comparisons/${c.slug}/`} class="border border-slate-200 rounded-lg px-3 py-2.5 text-xs font-medium text-slate-700 hover:border-brand-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
                   {company.name} vs {other.name}
                 </a>
               );
@@ -426,7 +426,7 @@ const jsonLd = [
             <p class="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">Key capabilities</p>
             <div class="flex flex-wrap gap-1.5">
               {company.badges.map(b => (
-                <span class="text-xs bg-blue-50 text-brand-700 border border-blue-100 px-2 py-0.5 rounded font-medium">{b}</span>
+                <span class="text-xs bg-brand-50 text-brand-700 border border-brand-100 px-2 py-0.5 rounded font-medium">{b}</span>
               ))}
             </div>
           </div>

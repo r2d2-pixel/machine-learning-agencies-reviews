@@ -56,7 +56,7 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
 
     <!-- QUICK ANSWER BOX -->
     <!-- TODO: Update bullet list below with the most useful buyer-intent recommendations for your niche -->
-    <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-12">
+    <div class="bg-brand-50 border border-brand-200 rounded-xl p-6 mb-12">
       <h2 class="text-lg font-bold text-slate-900 mb-3">Which {NICHE.label} {NICHE.providerLabel} is best?</h2>
       <p class="text-sm text-slate-600 mb-3">Short answer: the right choice depends on your project size, budget, and specific requirements.</p>
       <ul class="space-y-2 text-sm text-slate-700">
@@ -87,7 +87,7 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
           </thead>
           <tbody>
             {companies.map((c, i) => (
-              <tr class={`border-b border-slate-100 hover:bg-slate-50 transition-colors ${c.featured ? 'border-l-4 border-l-brand-600 bg-blue-50/40' : ''}`}>
+              <tr class={`border-b border-slate-100 hover:bg-slate-50 transition-colors ${c.featured ? 'border-l-4 border-l-brand-600 bg-brand-50/40' : ''}`}>
                 <td class="px-4 py-3 whitespace-nowrap">
                   <div class="flex items-center gap-2">
                     <a href={`/companies/${c.slug}/`} class="font-semibold text-brand-600 hover:underline">{c.name}</a>
@@ -165,7 +165,7 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
       <p class="text-slate-600 mb-8 text-sm">Featured profiles for the top-rated {NICHE.providersLabel}. Full reviews available for all {companies.length} {NICHE.providersLabel} via their profile pages.</p>
       <div class="space-y-8">
         {featuredProfiles.map((c, i) => (
-          <div class={`border rounded-xl p-6 ${c.featured ? 'border-brand-300 bg-blue-50/30' : 'border-slate-200'}`}>
+          <div class={`border rounded-xl p-6 ${c.featured ? 'border-brand-300 bg-brand-50/30' : 'border-slate-200'}`}>
             <div class="flex items-start justify-between gap-4 flex-wrap mb-3">
               <div>
                 <div class="flex items-center gap-3 mb-1">
@@ -560,7 +560,7 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
           const c1 = companies.find(co => co.slug === c.slug1)!;
           const c2 = companies.find(co => co.slug === c.slug2)!;
           return (
-            <a href={`/comparisons/${c.slug}/`} class="border border-slate-200 rounded-lg px-3 py-2.5 text-xs font-medium text-slate-700 hover:border-brand-300 hover:text-brand-600 hover:bg-blue-50 transition-colors">
+            <a href={`/comparisons/${c.slug}/`} class="border border-slate-200 rounded-lg px-3 py-2.5 text-xs font-medium text-slate-700 hover:border-brand-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
               {c1.name} vs {c2.name}
             </a>
           );
@@ -575,7 +575,7 @@ const allEngagementModels = [...new Set(companies.flatMap(c => c.engagementModel
       <p class="text-slate-600 mb-6 text-sm">Looking for alternatives to a specific {NICHE.providerLabel}? Each alternatives page lists ranked alternatives covering all {companies.length} {NICHE.providersLabel} in this review.</p>
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
         {companies.map(c => (
-          <a href={`/alternatives/${c.slug}/`} class="border border-slate-200 rounded-lg px-3 py-2.5 text-xs font-medium text-slate-700 hover:border-brand-300 hover:text-brand-600 hover:bg-blue-50 transition-colors">
+          <a href={`/alternatives/${c.slug}/`} class="border border-slate-200 rounded-lg px-3 py-2.5 text-xs font-medium text-slate-700 hover:border-brand-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
             {c.name} alternatives
           </a>
         ))}

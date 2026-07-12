@@ -112,7 +112,7 @@ const decisionRows: [string, string][] = [
     <p class="text-xs text-slate-400 mb-6">Last updated: {SITE.lastReviewed}</p>
 
     <!-- Quick verdict -->
-    <div class="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-10">
+    <div class="bg-brand-50 border border-brand-200 rounded-xl p-5 mb-10">
       <p class="font-semibold text-slate-900 mb-1">Quick verdict</p>
       <p class="text-sm text-slate-700">
         <a href={`/companies/${winner.slug}/`} class="font-bold text-brand-600">{winner.name}</a> ({winner.rating.toFixed(1)}/5)
@@ -439,7 +439,7 @@ const decisionRows: [string, string][] = [
             const rc1 = companies.find(co => co.slug === c.slug1)!;
             const rc2 = companies.find(co => co.slug === c.slug2)!;
             return (
-              <a href={`/comparisons/${c.slug}/`} class="border border-slate-200 rounded-lg px-3 py-2.5 text-xs font-medium text-slate-700 hover:border-brand-300 hover:text-brand-600 hover:bg-blue-50 transition-colors">
+              <a href={`/comparisons/${c.slug}/`} class="border border-slate-200 rounded-lg px-3 py-2.5 text-xs font-medium text-slate-700 hover:border-brand-300 hover:text-brand-600 hover:bg-brand-50 transition-colors">
                 {rc1.name} vs {rc2.name}
               </a>
             );
