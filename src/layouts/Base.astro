@@ -19,10 +19,9 @@ const {
 
 const pageTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
 
-// Featured company (your #1) pinned first, then alphabetical
-const featured = companies.find(c => c.featured);
+// Featured companies (editor's picks) pinned first by rating, then alphabetical
 const navCompanies = [
-  ...(featured ? [featured] : []),
+  ...companies.filter(c => c.featured).sort((a, b) => b.rating - a.rating),
   ...companies.filter(c => !c.featured).sort((a, b) => a.name.localeCompare(b.name)),
 ];
 
