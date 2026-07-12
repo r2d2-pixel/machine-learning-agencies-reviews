@@ -17,7 +17,10 @@ const {
   ogImage     = null,
 } = Astro.props;
 
-const pageTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
+const titleWithSite = title === SITE.name ? title : `${title} | ${SITE.name}`;
+// Strict <70-char budget for <title> (SEO): drop the " | SITE.name" suffix
+// rather than truncate mid-word if the full string would overflow.
+const pageTitle = titleWithSite.length >= 70 ? title : titleWithSite;
 
 // Featured companies (editor's picks) pinned first by rating, then alphabetical
 const navCompanies = [
