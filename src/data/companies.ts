@@ -20,6 +20,8 @@ export type Company = {
   cons: string[];
   useCases: string[];
   featured: boolean;
+  pricingTable?: { model: string; range: string; bestFor: string }[];
+  hidePricingIntro?: boolean;
 };
 
 export const companies: Company[] = [
@@ -106,13 +108,13 @@ export const companies: Company[] = [
     slug: 'tensorway',
     name: 'Tensorway',
     website: 'https://www.tensorway.com/services/machine-learning',
-    tagline: 'Deep learning specialist backed by its parent company\'s 25-year software delivery track record.',
+    tagline: 'Production-ready machine learning built on 25 years of enterprise software delivery',
     description: 'Tensorway is a machine learning development company headquartered in Alicante, Spain, built on the software delivery infrastructure of its parent company, Anadea. The firm employs 50+ data scientists and ML engineers focused exclusively on deep learning, NLP, computer vision, and agentic AI, with over 15 completed ML projects across healthcare, hospitality, financial services, edtech, and technology/SaaS. Its differentiation lies in boutique team access — clients work directly with senior deep learning engineers rather than through the account-management layers typical of larger firms, with hands-on production ML delivery on AWS. Minimum project size starts at $10K.',
     founded: 2019,
     hq: 'Alicante, Spain',
     teamSize: '50–100',
     rating: 4.5,
-    badges: ['deep-learning', 'nlp', 'computer-vision', 'generative-ai', 'mlops', 'custom-ml', 'ai-agents'],
+    badges: ['deep-learning', 'nlp', 'computer-vision', 'generative-ai', 'mlops', 'custom-ml', 'ai-agents', 'ai-strategy', 'staff-aug'],
     bestFor: 'Mid-market teams needing senior deep learning expertise in NLP, computer vision, or agentic AI with direct engineer access',
     primaryDifferentiator: 'Boutique deep-learning specialist offering direct access to senior engineers, drawing on the 25-year delivery experience of its parent company',
     pricingModel: 'Dedicated team, fixed project, retainer, T&M',
@@ -122,6 +124,7 @@ export const companies: Company[] = [
     engagementModels: ['Dedicated team', 'Fixed project', 'Retainer', 'Time & materials'],
     pros: [
       'Strong delivery track record in deep learning and NLP, with client references available under NDA',
+      'Hands-on production ML delivery on AWS across computer vision and NLP workloads',
       'Direct access to senior ML engineers — no account management layers between client and delivery team',
       'Established project-management and QA processes for predictable, well-documented delivery',
       'Specialisation in agentic AI and LLM integration is ahead of most generalist competitors at this team size',
@@ -140,6 +143,13 @@ export const companies: Company[] = [
       'MLOps setup and model deployment on AWS for mid-market teams without internal ML infrastructure',
     ],
     featured: true,
+    pricingTable: [
+      { model: 'Fixed project', range: 'From $10K', bestFor: 'Well-defined scope' },
+      { model: 'Retainer', range: 'Monthly rate; not public', bestFor: 'Ongoing AI engineering' },
+      { model: 'Time & materials', range: '$50 - $99 / hr', bestFor: 'Exploratory work or undefined scope' },
+      { model: 'Dedicated team', range: '$5K+ / month', bestFor: 'Large ML programmes or ongoing capability' },
+    ],
+    hidePricingIntro: true,
   },
   {
     slug: 'fractal-analytics',

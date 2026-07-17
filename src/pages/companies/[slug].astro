@@ -198,12 +198,14 @@ const jsonLd = [
         <!-- Pricing -->
         <section id="pricing" class="mb-10">
           <h2 class="text-xl font-bold text-zinc-50 mb-4">{company.name} pricing</h2>
-          <p class="text-zinc-300 mb-4 text-sm">
-            Short answer: {company.name} uses a {company.pricingModel.toLowerCase()} pricing approach.
-            {company.minimumEngagement !== 'Not disclosed'
-              ? `Minimum engagement starts at ${company.minimumEngagement}.`
-              : 'Minimum engagement is not publicly disclosed; a discovery call is required.'}
-          </p>
+          {!company.hidePricingIntro && (
+            <p class="text-zinc-300 mb-4 text-sm">
+              Short answer: {company.name} uses a {company.pricingModel.toLowerCase()} pricing approach.
+              {company.minimumEngagement !== 'Not disclosed'
+                ? `Minimum engagement starts at ${company.minimumEngagement}.`
+                : 'Minimum engagement is not publicly disclosed; a discovery call is required.'}
+            </p>
+          )}
           <div class="overflow-x-auto rounded-xl border border-zinc-700 mb-4">
             <table class="w-full text-sm">
               <thead>
@@ -214,27 +216,29 @@ const jsonLd = [
                 </tr>
               </thead>
               <tbody>
-                {company.engagementModels.map((m, i) => (
+                {(company.pricingTable ?? company.engagementModels.map(m => ({
+                  model: m,
+                  range: m.toLowerCase().includes('fixed') ? `From ${company.minimumEngagement !== 'Not disclosed' ? company.minimumEngagement : 'not disclosed'}` :
+                         m.toLowerCase().includes('retainer') ? 'Monthly rate; not public' :
+                         'Variable; depends on team size',
+                  bestFor: m.toLowerCase().includes('fixed') ? 'Well-defined scope' :
+                           m.toLowerCase().includes('retainer') ? 'Ongoing AI engineering' :
+                           'Large programmes or team augmentation',
+                }))).map((row, i) => (
                   <tr class={`border-b border-zinc-800 ${i % 2 === 1 ? 'bg-zinc-900/50' : ''}`}>
-                    <td class="px-4 py-3 font-medium text-zinc-100">{m}</td>
-                    <td class="px-4 py-3 text-zinc-300">
-                      {m.toLowerCase().includes('fixed') ? `From ${company.minimumEngagement !== 'Not disclosed' ? company.minimumEngagement : 'not disclosed'}` :
-                       m.toLowerCase().includes('retainer') ? 'Monthly rate; not public' :
-                       'Variable; depends on team size'}
-                    </td>
-                    <td class="px-4 py-3 text-zinc-300">
-                      {m.toLowerCase().includes('fixed') ? 'Well-defined scope' :
-                       m.toLowerCase().includes('retainer') ? 'Ongoing AI engineering' :
-                       'Large programmes or team augmentation'}
-                    </td>
+                    <td class="px-4 py-3 font-medium text-zinc-100">{row.model}</td>
+                    <td class="px-4 py-3 text-zinc-300">{row.range}</td>
+                    <td class="px-4 py-3 text-zinc-300">{row.bestFor}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <div class="bg-amber-900/30 border border-amber-800 rounded-lg p-4 text-sm text-amber-300">
-            {company.name} does not publish a public rate card. Contact them directly via their website to get project-specific pricing.
-          </div>
+          {!company.hidePricingIntro && (
+            <div class="bg-amber-900/30 border border-amber-800 rounded-lg p-4 text-sm text-amber-300">
+              {company.name} does not publish a public rate card. Contact them directly via their website to get project-specific pricing.
+            </div>
+          )}
         </section>
 
         <!-- Pros and cons -->
