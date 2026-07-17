@@ -17,4 +17,5 @@ export const SERVICE_LABELS: Record<string, string> = {
   'predictive-analytics': 'Predictive Analytics',
   'ai-strategy':          'AI Strategy',
   'staff-aug':            'Staff Augmentation',
+  'ai-agents':            'AI Agents',
 };

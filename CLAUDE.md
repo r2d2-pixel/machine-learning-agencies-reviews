@@ -180,7 +180,7 @@ overall company quality.
 ```
 Tiger Analytics: founded 2011, HQ Santa Clara CA, 5,000+ employees
 Forte Group: founded 2000, HQ Boca Raton FL, 250–500 employees, Clutch 4.9/5
-Tensorway: founded 2019, HQ Valencia Spain, 50+ employees, AWS Premier, Clutch 4.9/5
+Tensorway: founded 2019, HQ Alicante Spain, 50+ employees, boutique deep-learning specialist (parent company: Anadea)
 Fractal Analytics: founded 2000, HQ NYC/Mumbai, 5,000+ employees, IPO Feb 2026 on NSE/BSE
 Quantiphi: founded 2013, HQ Marlborough MA, ~2,670 employees, AWS Premier ML Consulting Competency, raised $63M
 Sigmoid: founded 2013, HQ Bengaluru/NYC, 1,000+ employees, Sequoia-backed, Everest Group Star Performer
