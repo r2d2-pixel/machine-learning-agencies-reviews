@@ -11,7 +11,12 @@ export default defineConfig({
   },
   integrations: [
     tailwind(),
-    sitemap(),
+    sitemap({
+      serialize(item) {
+        item.lastmod = new Date();
+        return item;
+      },
+    }),
     mdx(),
   ],
   output: 'static',
