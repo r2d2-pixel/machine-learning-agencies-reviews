@@ -6,7 +6,6 @@ export const SITE = {
   description:   'Find and compare the best machine learning agencies. Independent reviews, verified data, pricing ranges, and side-by-side comparisons of 36 top ML firms.',
   locale:        'en_US',
   twitterHandle: '',
-  lastReviewed:  'July 2026',
 };
 
 export const NICHE = {
