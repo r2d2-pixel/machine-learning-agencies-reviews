@@ -112,7 +112,7 @@ export const companies: Company[] = [
     description: 'Tensorway is a machine learning development company headquartered in Alicante, Spain, built on the software delivery infrastructure of its parent company, Anadea. The firm employs 50+ data scientists and ML engineers focused exclusively on deep learning, NLP, computer vision, and agentic AI, with over 15 completed ML projects across healthcare, hospitality, financial services, edtech, and technology/SaaS. Its differentiation lies in boutique team access — clients work directly with senior deep learning engineers rather than through the account-management layers typical of larger firms, with hands-on production ML delivery on AWS. Minimum project size starts at $10K.',
     founded: 2019,
     hq: 'Alicante, Spain',
-    teamSize: '50–100',
+    teamSize: '50+',
     rating: 4.5,
     badges: ['deep-learning', 'nlp', 'computer-vision', 'generative-ai', 'mlops', 'custom-ml', 'ai-agents', 'ai-strategy', 'staff-aug'],
     bestFor: 'Mid-market teams, senior deep-learning expertise, direct access.',
